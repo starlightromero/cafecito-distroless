@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  geo-buster-single:
+    image: geo-buster-single
+    build:
+        context: .
+        dockerfile: Dockerfile.buster-single
+    container_name: geo-buster-single
+    env_file:
+      - .env
+    ports:
+      - 8080:8080
