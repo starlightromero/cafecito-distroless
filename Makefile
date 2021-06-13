@@ -60,3 +60,5 @@ start-scratch:
 
 stop-scratch:
 	${compose} ${scratch} down
+
+build-all: build-alpine-single build-alpine build-buster-single build-buster build-distroless build-scratch
