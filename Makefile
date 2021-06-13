@@ -25,15 +25,6 @@ start-alpine:
 stop-alpine:
 	${compose} ${alpine} down
 
-build-buster:
-	${compose} ${buster} build
-
-start-buster:
-	${compose} ${buster} up
-
-stop-buster:
-	${compose} ${buster} down
-
 build-buster-single:
 	${compose} ${buster-single} build
 
@@ -42,6 +33,15 @@ start-buster-single:
 
 stop-buster-single:
 	${compose} ${buster-single} down
+
+build-buster:
+	${compose} ${buster} build
+
+start-buster:
+	${compose} ${buster} up
+
+stop-buster:
+	${compose} ${buster} down
 
 build-distroless:
 	${compose} ${distroless} build
