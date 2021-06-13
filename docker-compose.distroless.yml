@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  geo-distroless:
+    image: geo-distroless
+    build:
+        context: .
+        dockerfile: Dockerfile.distroless
+    container_name: geo-distroless
+    env_file:
+      - .env
+    ports:
+      - 8080:8080
