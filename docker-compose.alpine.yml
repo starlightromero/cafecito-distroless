@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  geo-alpine:
+    image: geo-alpine
+    build:
+        context: .
+        dockerfile: Dockerfile.alpine
+    container_name: geo-alpine
+    env_file:
+      - .env
+    ports:
+      - 8080:8080
