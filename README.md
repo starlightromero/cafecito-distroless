@@ -8,7 +8,7 @@ If you want to download the code and try it out yourself, you will need to sign 
 https://geo.ipify.org/
 ```
 
-## Needed Software
+## Software Required
 
 - docker
 - docker-compose
@@ -78,3 +78,14 @@ Run the application!
 `stop-scratch`: Stop Geolocator app with an Scratch base image using a multi-stage build
 
 `build-all`: Build all images
+
+## Image Sizes
+```
+REPOSITORY                TAG           IMAGE ID       CREATED              SIZE
+geo-buster-single         latest        71c5d3d96bf6   2 minutes ago        982MB
+geo-buster                latest        f0059892702e   2 minutes ago        871MB
+geo-alpine-single         latest        26c1187165e9   2 minutes ago        422MB
+geo-alpine                latest        2c6ab726e92e   3 minutes ago        311MB
+geo-distroless            latest        6127f8ad916c   3 minutes ago        10.4MB
+geo-scratch               latest        530ed9f53331   4 minutes ago        8.83MB
+```
