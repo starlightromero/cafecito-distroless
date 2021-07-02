@@ -1,8 +1,7 @@
 .git
 .vscode
 .env*
-.dockerignore
-.gitignore
+.*ignore
 *.yml
 Dockerfile*
 Makefile
