@@ -1,4 +1,4 @@
-FROM golang:1.16-buster as build
+FROM golang:1.16.6-buster as build
 
 WORKDIR /app
 
@@ -11,8 +11,10 @@ COPY . .
 
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build .
 
-FROM golang:1.16-buster
+FROM golang:1.16.6-buster
 
 COPY --from=build /app/geolocation /usr/bin/geolocation
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=2 CMD curl -f http://localhost/ || exit 1
 
 ENTRYPOINT ["/usr/bin/geolocation"]
