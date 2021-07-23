@@ -15,6 +15,4 @@ FROM gcr.io/distroless/static:nonroot
 
 COPY --from=build /app/geolocation /usr/bin/geolocation
 
-HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=2 CMD curl -f http://localhost/ || exit 1
-
 ENTRYPOINT ["/usr/bin/geolocation"]
